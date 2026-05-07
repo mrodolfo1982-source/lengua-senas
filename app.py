@@ -7,8 +7,7 @@ st.set_page_config(page_title="LSC Translator", layout="wide")
 st.title("🤟 Intérprete LSC")
 
 # Opción para subir audio (es lo más estable en la web)
-archivo_audio = st.file_input("Sube un audio (.wav) o graba uno desde tu celular", type=["wav"])
-
+archivo_audio = st.file_uploader("Sube un audio (.wav) o graba uno desde tu celular", type=["wav"])
 if archivo_audio is not None:
     r = sr.Recognizer()
     with sr.AudioFile(archivo_audio) as source:
